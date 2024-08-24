@@ -1,0 +1,12 @@
+var twoSum = function(nums, target) {
+    let hashMap = {};
+    for (let i = 0; i < nums.length; i++) {
+        let number = nums[i];
+        if (hashMap[target - number] == undefined) {
+            hashMap[number] = i;
+        } else {
+            return [i, hashMap[target - number]];
+        }
+    }
+    return [];
+};
